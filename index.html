@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MME Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">&lt; MME &gt;</div>
+            <ul class="navbar-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-container">
+                <div class="text-section">
+                    <h1 class="intro-text">
+                        <span class="gradient-text">Hi there</span>
+                        <span class="wave-emoji">👋</span>
+                        <span class="gradient-text">I'm</span>
+                    </h1>      
+                    <h1 class="name typing-text"></h1>
+                    <div class="social-icons">
+                        <a href="https://drive.google.com/file/d/1kbv3nKGd4e5Hr4YkGNROxVRfK1SEUvPQ/view" target="_blank" class="resume-button">
+                            View Resume
+                        </a>
+                        <a href="https://github.com/esmmica" target="_blank">
+                            <img src="assets/giticon.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.facebook.com/Loves2kmicah" target="_blank">
+                            <img src="assets/fbicon.png" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <script>
+        // Typing Effect Script
+        const texts = ["MECAELA M. ESTOQUE", "Computer Engineering Student"];
+        let textIndex = 0;
+        let charIndex = 0;
+        const typingSpeed = 100;
+        const erasingSpeed = 50;
+        const delayBetweenTexts = 1500; // Delay after typing full text
+
+        const typingTextElement = document.querySelector('.typing-text');
+
+        function typeText() {
+            if (charIndex < texts[textIndex].length) {
+                typingTextElement.textContent += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, typingSpeed);
+            } else {
+                // Wait after typing complete
+                setTimeout(eraseText, delayBetweenTexts);
+            }
+        }
+
+        function eraseText() {
+            if (charIndex > 0) {
+                typingTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseText, erasingSpeed);
+            } else {
+                // Switch text and start typing again
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeText, typingSpeed);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeText, 500);
+        });
+    </script>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="gradient-text">About Me</span>
+        </h2>
+        <div class="about-container">
+            <div class="avatar-section">
+                <img src="assets/rbprofile.png" alt="Mecaela Avatar">
+            </div>  
+            <div class="about-text">
+                <!-- Main description aligned with title -->
+                <p>I'm a 4th-year Computer Engineering student at Universidad de Manila with a passion for both software development and hardware projects. I enjoy working on creative and technical projects, from building interactive applications to developing hardware solutions using microcontrollers and sensors. I am always looking for new challenges and opportunities to apply and expand my knowledge. Here are some technologies I am familiar with:</p>
+                
+                <!-- Technologies list -->
+                 <!-- Inside your about-text div, replace the tech-container with this -->
+<div class="tech-container">
+    <div class="tech-columns">
+        <!-- Column 1 -->
+        <div class="tech-column">
+            <span class="tech-item"><span class="arrow">▶</span> HTML</span>
+            <span class="tech-item"><span class="arrow">▶</span> CSS</span>
+            <span class="tech-item"><span class="arrow">▶</span> JavaScript</span>
+            <span class="tech-item"><span class="arrow">▶</span> React</span>
+        </div>
+        <!-- Column 2 -->
+        <div class="tech-column">
+            <span class="tech-item"><span class="arrow">▶</span> C#</span>
+            <span class="tech-item"><span class="arrow">▶</span> Firebase</span>
+            <span class="tech-item"><span class="arrow">▶</span> Python</span>
+            <span class="tech-item"><span class="arrow">▶</span> Arduino IDE</span>
+        </div>
+        <!-- Column 3 -->
+        <div class="tech-column">
+            <span class="tech-item"><span class="arrow">▶</span> Node.js</span>
+            <span class="tech-item"><span class="arrow">▶</span> MIT App Inventor</span>
+            <span class="tech-item"><span class="arrow">▶</span> SQL</span>
+            <span class="tech-item"><span class="arrow">▶</span> Flutter</span>
+        </div>
+    </div>
+</div>
+
+                <!-- Internship seeking text at the bottom -->
+                <p class="internship-seeking">Seeking an OJT internship to apply my knowledge in a professional setting.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="skills">
+        <h2 class="skills-title"> 
+            <span class="gradient-text">Skills</span>
+        </h2>
+        
+        <p class="skills-intro">
+            As a computer engineering student, I am continuously developing my technical and soft skills to prepare for real-world challenges. My goal is to enhance my knowledge and gain practical experience through OJT.
+        </p>
+        
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-number">01</div>
+                <h3 class="skill-name">non-stop learning</h3>
+                <p class="skill-description">Technology is always evolving, and I strive to keep learning and improving my skills to stay updated with the latest advancements.</p>
+            </div>
+            
+            <div class="skill">
+                <div class="skill-number">02</div>
+                <h3 class="skill-name">communicative</h3>
+                <p class="skill-description">Strong communication skills are essential in any field. I aim to express my ideas clearly and collaborate efficiently with others.</p>
+            </div>
+            
+            <div class="skill">
+                <div class="skill-number">03</div>
+                <h3 class="skill-name">open-minded</h3>
+                <p class="skill-description">Being adaptable and open to new ideas helps me work well in teams and learn from feedback to improve my technical and problem-solving skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="project-title"> 
+                <span class="gradient-text">Projects</span>
+            </h2>
+            <div class="projects-container">
+                <!-- First Project -->
+                <div class="project">
+                    <a href="https://github.com/your-first-project" target="_blank"></a>
+                    <div class="project-content">
+                        <h4>Personal Project</h4>
+                        <h3>Personal Portfolio Website</h3>
+                        <p class="project-description">
+                            An interactive portfolio website showcasing my skills, projects, and contact information. Designed in Figma and developed using HTML, CSS, and JavaScript, this site serves as my professional digital resume for applying to On-the-Job Training (OJT) programs.
+                        </p>
+                        <div class="project-tech-stack">
+                            <img src="assets/html.png" alt="HTML">
+                            <img src="assets/css.png" alt="CSS">
+                            <img src="assets/js.png" alt="JavaScript">
+                        </div>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="assets/project1.png" alt="Example Project Image">
+                    </div>
+                </div>
+
+                <!-- Second Project -->
+                <div class="project reverse">
+                    <a href="https://github.com/your-second-project" target="_blank"></a>
+                    <div class="project-content">
+                        <h4>Personal Project</h4>
+                        <h3>Scholar Hub</h3>
+                        <p class="project-description">
+                           A web-based platform designed to help researchers find relevant studies and references based on their topics. Users can input their research topic into the search engine, and the system will automatically list related research papers and articles.
+                        </p>
+                        <div class="project-tech-stack">
+                            <img src="assets/js.png" alt="Js">
+                            <img src="assets/css.png" alt="Css">
+                            <img src="assets/html.png" alt="Html">
+                        </div>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="assets/project2.png" alt="Another Project Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2><span class="gradient-text">Contact</span></h2>
+        <p class="subtitle">Feel free to send me a message!</p>
+        
+        <form class="contact-form" action="https://formsubmit.co/micaestoque6@gmail.com" method="POST">
+            <!-- Honeypot to prevent spam -->
+            <input type="text" name="_honey" style="display:none">
+            
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Specify redirect after submission -->
+            <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+
+            <div class="form-group">
+                <label class="pink-label">Name :</label>
+                <input type="text" name="name" placeholder="Enter your name here..." required>
+            </div>
+
+            <div class="form-group">
+                <label class="pink-label">Email :</label>
+                <input type="email" name="email" placeholder="Enter your email here..." required>
+            </div>
+
+            <div class="form-group">
+                <label class="pink-label">Message :</label>
+                <textarea name="message" placeholder="Enter the message here..." required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p class="copyright">© All Rights Reserved by Mecaela M. Estoque</p>
+    </section>
+
+</body>
+</html>
